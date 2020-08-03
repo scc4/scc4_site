@@ -32,19 +32,16 @@ export default {
       console.log('Prop changed: ', newVal, ' | was: ', oldVal)
       canvasOn(newVal[1], newVal[2], newVal[3])
     }
-
   },
   mounted() {
     canvasOn('#00d67e', '#de00ff', '#ff9c00')
     }
   }
   function canvasOn(corA, corB, CorC){
-
     const canvas = document.querySelector("#waves")
     let context = canvas.getContext("2d")
     const pictureWidth = 1000
     const pictureHeight = 313
-
     const setCanvasSize = () => {
       const deviceRatio = window.devicePixelRatio || 1
       const pictureRatio = window.innerWidth / pictureWidth

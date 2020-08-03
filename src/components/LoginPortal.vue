@@ -5,7 +5,6 @@
         <div class="form-group col-md-6">
             <input type="number" v-model="agencia" size="3" placeholder="agência" class="form-control form-control-sm" maxlength="3" />
         </div>
-
         <div class="form-group">
             <input type="email" v-model="email" placeholder="e-mail ou login" class="form-control form-control-sm" />
         </div>

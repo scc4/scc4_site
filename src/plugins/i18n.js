@@ -6,6 +6,11 @@ Vue.use(VueI18n);
 const messages = {
 
     'pt-br':{
+
+        contato: 'contato',
+
+        saibaMais: 'Saiba mais',
+
         inicio:[
             {
                 slogan: "Uma empresa de TI",
@@ -29,6 +34,8 @@ const messages = {
         ]
     },
     'en':{
+        contato: 'contact',
+        saibaMais: 'More',
         inicio:[
             {
                 slogan: "A tech company",

@@ -13,12 +13,8 @@ Vue.component('country-flag', CountryFlag)
 
 
 Vue.config.productionTip = false;
-
 Vue.use(VueAxios, axios);
-
 Vue.config.productionTip = false;
-
-
 
 /*
 new Vue({

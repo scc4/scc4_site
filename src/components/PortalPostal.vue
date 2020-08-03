@@ -1,76 +1,19 @@
 <template>
+
     <div id="portalpostal">
 
         <!-- Portfolio Section -->
         <section id="portfolio">
+            <div class="row">
+            <Faixa :texto="textoFaixa"></Faixa>
+            </div>
             <div class="container">
                 <div class="row">
-                    <div>
-                        <b-card
-                                title="Card Title"
-                                img-src="https://picsum.photos/600/300/?image=25"
-                                img-alt="Image"
-                                img-top
-                                tag="article"
-                                style="max-width: 20rem;"
-                                class="mb-2"
-                        >
-                            <b-card-text>
-                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                            </b-card-text>
-
-                            <b-button href="#" variant="primary">Go somewhere</b-button>
-                        </b-card>
-                    </div>
+                    <Features v-for="feature in features" :key="feature.id" :heading="feature.head" :text="feature.text" :img-scr="feature.img"></Features>
                 </div>
-                <div class="row">
-                    <div class="col-md-12 col-sm-12">
-                        <!-- work section -->
-                        <div class="work-section wow fadeInUp" data-wow-delay="0.2s">
-                            <!-- work box section -->
-                            <div class="work-box-section wow fadeInUp" data-wow-delay="0.4s">
-                                <div class="work-box-wrapper col4-work-box">
-                                    <div class=" col-sm-6">
-                                        <!-- <div class="portfolio-thumb"> -->
-                                        <h3> <i class="fa fa-arrows-alt"></i> Envio de e-mails com atualização do rastreamento</h3>
-                                        <h3> <i class="fa fa-cogs"></i> Integração à ERPs e Marketplaces</h3>
-                                        <h3>  <i class="fa fa-code"></i> Imagem dos seus pacotes para você conferir o peso e as medidas</h3>
-                                        <!--</div>-->
-                                    </div>
-                                    <div class=" col-sm-6">
-                                            <a href="src/assets/img/portfolio-img1.jpg" class="image-popup">
-                                                <!--  <div class="portfolio-item-hover">
-                                                      <i class="fa fa-plus"></i>
-                                                  </div> -->
-                                                <img src="../assets/img/Selo_Certicacao_Correios_UX_positiva.png" class="img-responsive" alt="Portfolio"/>
-                                            </a>
-                                    </div>
 
-                                    <div class=" col-sm-8">
-                                            <img src="../assets/img/future-postal.jpg" class="img-responsive" alt="Portfolio"/>
-                                    </div>
-                                    <div class=" col-sm-4 bottom">
-                                    <!-- <div class="portfolio-thumb"> -->
-
-                                    <br>
-                                    <h3>  <i class="fa fa-mobile"></i> Apps IOS e Android</h3>
-                                    <br>
-                                    <br>
-                                    <a href="https://play.google.com/store/apps/details?id=br.com.scc4.newest.portalpostalcliente&hl=en"  target="_blank" class="image-popup">
-                                        <img src="../assets/img/download.png"  class="" alt="Portfolio"/>
-                                    </a>
-                                    <!--</div>-->
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
 
             </div>
-
         </section>
 
 
@@ -105,46 +48,44 @@
             </div>
         </section>
 
-
-        <!-- Footer Section -->
-
-        <footer>
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-md-12 col-sm-12">
-                        <div class="footer-copyright">
-                            <ul class="social-icon">
-                                <li><a href="#" class="fa fa-facebook wow fadeInUp" data-wow-delay="0.2s"></a></li>
-                                <li><a href="#" class="fa fa-twitter wow fadeInUp" data-wow-delay="0.4s"></a></li>
-                                <li><a href="#" class="fa fa-linkedin wow fadeInUp" data-wow-delay="0.6s"></a></li>
-                                <li><a href="#" class="fa fa-google-plus wow fadeInUp" data-wow-delay="0.8s"></a></li>
-                                <li><a href="#" class="fa fa-dribbble wow fadeInUp" data-wow-delay="1s"></a></li>
-                            </ul>
-                            <p class="small"> Copyright 2018  Miniml HTML Template - All Rights Reserved</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </footer>
-        <!-- Back top -->
+        <Footer></Footer>
 
         <a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
+</div>
 
-
-    </div>
 </template>
 
 
 <script>
+    import Features from "@/components/Features";
+    import Faixa from "@/components/Faixa";
+    import Footer from "@/components/Footer";
     export default {
         name: 'PortalPostal',
+        components: {Footer, Faixa, Features},
         data () {
             return {
                 info: null,
                 loading: true,
-                errored: false
+                errored: false,
+                features:[{
+                        id:0, img: '3675555.jpg', text:'Envie por e-mail para o destinatário ou remetente todas as atualizações de rastreamento da sua encomenda. (Em breve também por whatsapp)', head:'Mantenha seu cliente atualizado'
+                    },
+                    {
+                        id:1, img: 'scan-box1.jpg', text:'Nosso sistema registra uma foto de todas as suas encomendas no momento da pesagem. Confira o tamanho e peso de todas as suas caixas.', head:'Imagem da sua caixa'
+                    },
+                    {
+                        id:2,  img: 'onlineShop.jpg', text:'Integre seu ERP, loja virtual ou marketplace com o Portal Postal. Muito mais agilidade e organização na geração e conferencia de etiquetas.', head:'Totalmente integrado'
+                    },
+                    {
+                        id:4,  img: 'apps.jpg', text:'Procure por nossos Apps na Google Play ou na Apple Store e tenha controle total de seus envios diretamente do seu telefone.', head:'Aplicativos Android e IOS'
+                    },
+                    {
+                        id:5,  img: 'selo-correios.png', text:'O Portal Postal tem a certificação dos Correios. Garantia de qualidade e segurança.', head:'Certificado pela ECT'
+                    }
+                ],
+                textoFaixa: 'Conheça mais a nossa solução'
+
             }
         },
         filters: {

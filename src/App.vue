@@ -1,7 +1,5 @@
 <template>
   <div class="vue-template">
-
-
   <div class="navbar navbar-default navbar-static-top" id="menu" :style="{ backgroundColor: this.params[$selected].cores[0]}" >
     <div class="container">
       <div class="navbar-header">
@@ -28,7 +26,7 @@
           <li v-bind:class="{active:$selected == 2}">
             <router-link to="/boxcubo"> <a herf="#" > Boxcubo</a></router-link>
           <li v-bind:class="{active:$selected == 3}">
-            <router-link to="/contato"><a herf="#"  >Contato</a></router-link>
+            <router-link to="/contato"><a herf="#"  >{{$t('contato')}}</a></router-link>
         </li>
           <li>
             <span  v-for="entry in languages" :key="entry.title">
