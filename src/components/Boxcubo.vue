@@ -22,8 +22,8 @@
                         </div>
                     </div>
                     <div class="video-testimonial-content">
-                        <h4 class="mb10">Harlan M. Williams</h4>
-                        <p>Student Loan</p>
+                        <h4 class="mb10">REPENSE</h4>
+                        <p>a maneira cmo você pesa e mede suas caixas</p>
                     </div>
                 </div>
 
@@ -35,8 +35,8 @@
                        </div>
                     </div>
                     <div class="video-testimonial-content">
-                        <h4 class="mb10">Alisha A. Delapaz</h4>
-                        <p>Retirement Planning</p>
+                        <h4 class="mb10">REDUZA</h4>
+                        <p>tempo e recursos no porcesso de medição</p>
                     </div>
                 </div>
 
@@ -48,8 +48,8 @@
                         </div>
                     </div>
                     <div class="video-testimonial-content">
-                        <h4 class="mb10">Rebecca L. Jenkins</h4>
-                        <p>Term Insurance</p>
+                        <h4 class="mb10">REVISE</h4>
+                        <p>Veja a imagem seus objetos através da nossa interface gráfica ou na web</p>
                     </div>
                 </div>
             </div>
