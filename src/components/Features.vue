@@ -1,4 +1,5 @@
 <template>
+
         <div class="col-md-3 space">
             <div class="card-content">
                 <div class="card-img">
@@ -7,7 +8,7 @@
                 <div class="card-desc">
                     <h3>{{heading}}</h3>
                     <p>{{text}}</p>
-                    <a href="#" class="btn-card" >{{$t('saibaMais')}}</a>
+                    <button v-show="showButton" type="button" class="btn-card" >{{$t('saibaMais')}}</button>
                 </div>
             </div>
         </div>
@@ -19,7 +20,9 @@
         props: {
             imgScr: String,
             heading: String,
-            text: String
+            text: String,
+            showButton: Boolean,
+            btnURL: String
         },
         methods: {
             resolve_img_url: function (path) {
@@ -41,6 +44,7 @@
         background: #ffffff;
         border: 4px;
         box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+        padding-bottom: 12px;
     }
 
     .card-img {
@@ -121,9 +125,10 @@
         white-space: normal;
         word-wrap: break-word;
         color: #fff;
+
     }
     .btn-card:hover {
-        background: orange;
+        background: #23527c;
     }
     a.btn-card {
         text-decoration: none;

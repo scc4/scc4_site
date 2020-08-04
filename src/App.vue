@@ -44,7 +44,6 @@
               :msg =  "$t('inicio')[$selected].msg"
               :shapeColors = this.params[$selected].cores
               :login = this.$selected
-              :indice= this.$selected
       />
     <div id="app">
       <div class="inner-block">

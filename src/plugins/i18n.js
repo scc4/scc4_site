@@ -7,9 +7,9 @@ const messages = {
 
     'pt-br':{
 
-        contato: 'contato',
+        contato: 'Contato',
 
-        saibaMais: 'Saiba mais',
+        saibaMais: 'Mais',
 
         inicio:[
             {
@@ -34,7 +34,7 @@ const messages = {
         ]
     },
     'en':{
-        contato: 'contact',
+        contato: 'Contact',
         saibaMais: 'More',
         inicio:[
             {
