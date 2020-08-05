@@ -8,9 +8,8 @@ const messages = {
     'pt-br':{
 
         contato: 'Contato',
-
+        textoFaixa: 'Mais facilidades',
         saibaMais: 'Mais',
-
         inicio:[
             {
                 slogan: "Uma empresa de TI",
@@ -36,6 +35,7 @@ const messages = {
     'en':{
         contato: 'Contact',
         saibaMais: 'More',
+        textoFaixa: 'More Features',
         inicio:[
             {
                 slogan: "A tech company",

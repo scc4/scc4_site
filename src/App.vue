@@ -1,6 +1,13 @@
 <template>
   <div class="vue-template">
+        <span class="language">
+            <a class="tight" v-for="entry in languages" :key="entry.title" href="#"
+               @click="changeLocale(entry.language)">
+              <country-flag :country= "entry.flag" />
+            </a>
+    </span>
   <div class="navbar navbar-default navbar-static-top" id="menu" :style="{ backgroundColor: this.params[$selected].cores[0]}" >
+
     <div class="container">
       <div class="navbar-header">
         <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -15,28 +22,31 @@
           <img v-show="$selected == 3" src="./assets/img/logo_scc4_sm_gray.png" height="35"/>
         </a>
       </div>
+
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right linha">
           <li  v-bind:class="{active:$selected == 0}">
-            <router-link to="/home"><a herf="#" >Home</a></router-link>
+            <router-link to="/home"><a herf="#"  @click="closeModal" >Home</a></router-link>
           </li>
           <li  v-bind:class="{active:$selected == 1}">
-            <router-link to="/portalpostal"><a herf="#" >Portal Postal</a></router-link>
+            <router-link to="/portalpostal"><a herf="#"  @click="closeModal" >Portal Postal</a></router-link>
           </li>
           <li v-bind:class="{active:$selected == 2}">
-            <router-link to="/boxcubo"> <a herf="#" > Boxcubo</a></router-link>
+            <router-link to="/boxcubo"> <a herf="#"  @click="closeModal" > Boxcubo</a></router-link>
           <li v-bind:class="{active:$selected == 3}">
-            <router-link to="/contato"><a herf="#"  >{{$t('contato')}}</a></router-link>
-        </li>
+            <router-link to="/contato"><a herf="#" @click="closeModal" >{{$t('contato')}}</a></router-link>
+          </li>
           <li>
-            <span  v-for="entry in languages" :key="entry.title">
-            <a href="#" class="tight" @click="changeLocale(entry.language)">
-              <country-flag :country= "entry.flag" />
-            </a>
-            </span>
+            <a a herf="#"  @click="showModal" >Login</a>
+          </li>
+          <li>
+
           </li>
         </ul>
+
       </div>
+      <ModalLogin v-if ="$selected === 1"  v-show="isModalVisible" @close="closeModal"></ModalLogin>
+      <ModalLoginBox v-if ="$selected === 2"  v-show="isModalVisible" @close="closeModal"></ModalLoginBox>
     </div>
   </div>
       <Canvas
@@ -58,15 +68,20 @@
 import Canvas from "@/components/Canvas";
 import i18n from '@/plugins/i18n';
 import CountryFlag from 'vue-country-flag';
+import ModalLogin from "@/components/ModalLogin";
+import ModalLoginBox from "@/components/ModalLoginBox";
 
 export default {
     name: 'App',
    components: {
+     ModalLoginBox,
+     ModalLogin,
     Canvas,
      CountryFlag
    },
     data() {
     return {
+      isModalVisible: false,
       languages: [
         { flag: 'us', language: 'en', title: 'English' },
         { flag: 'br', language: 'pt-br', title: 'Português' }
@@ -100,7 +115,13 @@ export default {
   methods: {
       changeLocale(locale) {
         i18n.locale = locale;
-      }
+      },
+    showModal() {
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+    }
     }
 
   }
@@ -121,10 +142,23 @@ export default {
     margin-right: 0px !important;
     margin-left: 0px !important;
   }
-
   .router-link-active{
-    color: green;
+    color: white;
   }
+  .language{
+    position: fixed;
+    right: 60px;
+    z-index: 1200;
+  }
+  .language a{
+    margin-left: -25px;
+  }
+  @media (min-width: 1200px){
+    .container {
+      width: 90%;
+    }
+  }
+
 </style>
 
 

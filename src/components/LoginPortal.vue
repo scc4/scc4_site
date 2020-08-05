@@ -61,23 +61,7 @@
                         this.output = data.data.cliente_usuario.token
                     })
                     .catch(function (error) {this.output = error })
-            },
-
-          /*  goToPortal(){
-                let currentObj = this;
-                this.axios.post('https://portalpostal.com.br/rest/cliente/usuario/login?idEmpresa=' +this.agencia,
-                    {
-                    email: this.email,
-                    senha: this.senha
-                     }
-                )
-                    .then(function (response) {
-                        currentObj.output = response.data;
-                    })
-                    .catch(function (error) {
-                        currentObj.output = error;
-                    });
-            }*/
+            }
         },
         mounted () {
 

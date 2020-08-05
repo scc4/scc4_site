@@ -12,7 +12,7 @@
                             <img src="../assets/img/selo-correios_sm.png"/>
                         </div>
                         <div class="col-sm-9">
-                            <h2 class="wow fadeInUp text-center align-middle" data-wow-delay="0.4s">{{textoFaixa}}</h2>
+                            <h2 class="wow fadeInUp text-center align-middle" data-wow-delay="0.4s">{{$t('textoFaixa')}}</h2>
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                         </div>
                         <div class="fadeInUp col-md-6" data-wow-delay="0.4s">
                             <span class="big-text">+ de 17.000 </span>
-                            <p>Empresas Utilizando</p>
+                            <p>Empresas atendidas</p>
                         </div>
                     </div>
 
@@ -97,7 +97,7 @@
                         id:4,  img: 'apps.jpg', text:'Procure por nossos Apps na Google Play ou na Apple Store e tenha controle total de seus envios diretamente do seu telefone.', head:'Aplicativos Android e IOS', btn:false
                     }
                 ],
-                textoFaixa: 'MAIS FACILIDADES'
+
 
             }
         },

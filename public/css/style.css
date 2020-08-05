@@ -15,7 +15,7 @@ body {
 -----------------------------------------*/
 
 h1,h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Montserrat', serif;
   font-weight: 400;
   letter-spacing: 1px;
 }
@@ -805,9 +805,6 @@ footer .footer-copyright p {
 
 @media (max-width: 768px) {
 
-  body {
-    text-align: center;
-  }
 
   h1 {
     font-size: 48px;
@@ -885,7 +882,14 @@ footer .footer-copyright p {
         top: 250px;
     }
 
-
+    .align-items-center {
+        -ms-flex-align: center!important;
+        align-items: center!important;
+    }
+    .d-flex {
+        display: -ms-flexbox!important;
+        display: flex!important;
+    }
 }
 
 

@@ -23,7 +23,7 @@
                     </div>
                     <div class="video-testimonial-content">
                         <h4 class="mb10">REPENSE</h4>
-                        <p>a maneira cmo você pesa e mede suas caixas</p>
+                        <p>Como você pesa e mede suas caixas?</p>
                     </div>
                 </div>
 
@@ -36,7 +36,7 @@
                     </div>
                     <div class="video-testimonial-content">
                         <h4 class="mb10">REDUZA</h4>
-                        <p>tempo e recursos no porcesso de medição</p>
+                        <p>Menos tempo e recursos no porcesso de medição</p>
                     </div>
                 </div>
 
@@ -53,8 +53,18 @@
                     </div>
                 </div>
             </div>
+
+        <div class="row align-items-center d-flex">
+            <div class="col-lg-8 col-sm-12 pt-5">
+                <img src="../assets/img/future-postal.jpg" />
+            </div>
+                <div class="col-lg-4 col-sm-12 pt-5">
+                    <ImageGrid></ImageGrid>
+                </div>
+            </div>
         </div>
     </div>
+
     <section id="cta" class="bg-gray">
         <div class="container">
             <div class="row">
@@ -69,7 +79,7 @@
                     </div>
                     <div class="fadeInUp col-md-6" data-wow-delay="0.4s">
                         <span class="big-text">+ de 180 </span>
-                        <p>Empresas Utilizando</p>
+                        <p>Clientes</p>
                     </div>
                 </div>
             </div>
@@ -82,29 +92,20 @@
 
 <script>
     import Footer from "@/components/Footer";
+    import ImageGrid from "@/components/ImageGrid";
     export default {
         name: "Boxcubo",
-        components: {Footer}
+        components: {ImageGrid, Footer}
     }
 </script>
 
 <style scoped>
-    .big-text{
-        font-size: 3em;
-        font-weight: bolder;
-    }
-    p { margin: 0 0 20px; line-height: 1.7; }
-    p:last-child { margin: 0px; }
-    ul, ol { font-family: 'Roboto', sans-serif; }
-    a { text-decoration: none; color: #7d7f82; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
-    a:focus, a:hover { text-decoration: none; color: #fe5b10; }
+
+
+
+    .big-text{ font-size: 3em; font-weight: bolder; }
     .video-testimonial-block { position: relative; width: auto; height: 206px; overflow: hidden; margin-bottom: 30px; }
-    .video-testimonial-block .video-thumbnail { height: 100%; width: 100%; position: absolute; z-index: 1; background-size: cover; top: 0; left: 0; }
-    .video-testimonial-block .video { }
     .video-testimonial-block .video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0px; }
-    .video-testimonial-block .video-play { position: absolute; z-index: 2; top: 50%; left: 50%; margin-left: -40px; margin-top: -18px; text-decoration: none; }
-    .video-testimonial-block .video-play::before { content: "\f144"; font-family: 'Font Awesome\ 5 Free'; font-weight: 900; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 50px; color: #b3b5bc; }
-    .video-testimonial-block .video-play:hover::before { color: #172651; }
     .mb10{margin-bottom:10px;}
     .section-title { margin-bottom: 40px; }
 </style>
