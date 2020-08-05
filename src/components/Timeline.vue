@@ -1,8 +1,7 @@
 <template>
     <div class="center-block central">
         <div>
-            <div class="">
-                <h4>Nossa História</h4>
+                <h2>Nossa História</h2>
                 <ul class="timeline">
                     <li v-for="item in items" :key="item.id">
                         <a href="#" class="float-right">{{item.date}}</a>
@@ -11,7 +10,6 @@
                     </li>
                 </ul>
             </div>
-        </div>
     </div>
 </template>
 <script>

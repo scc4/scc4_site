@@ -1,6 +1,6 @@
 <template>
 
-        <div class="col-md-3 space">
+        <div :class="wrapClass">
             <div class="card-content">
                 <div class="card-img">
                     <img :src="resolve_img_url(imgScr)" alt="">
@@ -22,7 +22,8 @@
             heading: String,
             text: String,
             showButton: Boolean,
-            btnURL: String
+            btnURL: String,
+            wrapClass: String
         },
         methods: {
             resolve_img_url: function (path) {

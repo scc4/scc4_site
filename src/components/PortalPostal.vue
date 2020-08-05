@@ -19,10 +19,8 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <Features v-for="feature in features" :key="feature.id" :heading="feature.head" :text="feature.text" :img-scr="feature.img" :showButton="feature.btn"></Features>
+                    <Features v-for="feature in features" :key="feature.id" :heading="feature.head" :text="feature.text" :img-scr="feature.img" :showButton="feature.btn" :wrap-class="feature.class"></Features>
                 </div>
-
-
             </div>
         </section>
 
@@ -85,16 +83,36 @@
                 loading: true,
                 errored: false,
                 features:[{
-                        id:0, img: '3675555.jpg', text:'Envie por e-mail para o destinatário ou remetente todas as atualizações de rastreamento da sua encomenda. (Em breve também por whatsapp)', head:'Mantenha seu cliente atualizado', btn:false
+                        id:0,
+                    img: '3675555.jpg',
+                    text:'Envie por e-mail para o destinatário ou remetente todas as atualizações de rastreamento da sua encomenda. (Em breve também por whatsapp)',
+                    head:'Mantenha seu cliente atualizado',
+                    btn:false,
+                    class: 'col-md-3 space'
                     },
                     {
-                        id:1, img: 'scan-box1.jpg', text:'Nosso sistema registra uma foto de todas as suas encomendas no momento da pesagem. Confira o tamanho e peso de todas as suas caixas.', head:'Imagem da sua caixa', btn:false
+                        id:1,
+                        img: 'scan-box1.jpg',
+                        text:'Nosso sistema registra uma foto de todas as suas encomendas no momento da pesagem. Confira o tamanho e peso de todas as suas caixas.',
+                        head:'Imagem da sua caixa',
+                        btn:false,
+                        class: 'col-md-3 space'
                     },
                     {
-                        id:2,  img: 'onlineShop.jpg', text:'Integre seu ERP, loja virtual ou marketplace com o Portal Postal. Muito mais agilidade e organização na geração e conferencia de etiquetas.', head:'Totalmente integrado', btn:false
+                        id:2,
+                        img: 'onlineShop.jpg',
+                        text:'Integre seu ERP, loja virtual ou marketplace com o Portal Postal. Muito mais agilidade e organização na geração e conferencia de etiquetas.',
+                        head:'Totalmente integrado',
+                        btn:false,
+                        class: 'col-md-3 space'
                     },
                     {
-                        id:4,  img: 'apps.jpg', text:'Procure por nossos Apps na Google Play ou na Apple Store e tenha controle total de seus envios diretamente do seu telefone.', head:'Aplicativos Android e IOS', btn:false
+                        id:4,
+                        img: 'apps.jpg',
+                        text:'Procure por nossos Apps na Google Play ou na Apple Store e tenha controle total de seus envios diretamente do seu telefone.',
+                        head:'Aplicativos Android e IOS',
+                        btn:false,
+                        class: 'col-md-3 space'
                     }
                 ],
 

@@ -12,7 +12,7 @@ const messages = {
         saibaMais: 'Mais',
         inicio:[
             {
-                slogan: "Uma empresa de TI",
+                slogan: "Apaixonados por TI",
                 msg: "Acreditamos que, em um futuro próximo, todo processo de logistica será automatizado."
             },
             {
@@ -38,7 +38,7 @@ const messages = {
         textoFaixa: 'More Features',
         inicio:[
             {
-                slogan: "A tech company",
+                slogan: "IT Lovers",
                 msg: "We believe that, in the near future, the entire logistics process will be automated."
 
             },

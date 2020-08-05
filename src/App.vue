@@ -56,9 +56,7 @@
               :login = this.$selected
       />
     <div id="app">
-      <div class="inner-block">
         <router-view />
-      </div>
   </div>
 
   </div>
