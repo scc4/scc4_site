@@ -1,70 +1,42 @@
 <template>
-
-    <div id="portalpostal">
-
-        <!-- Portfolio Section -->
-        <section id="portfolio">
-            <div class="row">
+    <div>
+            <div class="bg-gray up" >
                 <div class="container">
-                    <div class="row">
-
-                        <div class="col-sm-3">
-                            <img src="../assets/img/selo-correios_sm.png"/>
-                        </div>
-                        <div class="col-sm-9">
-                            <h2 class="wow fadeInUp text-center align-middle" data-wow-delay="0.4s">{{$t('textoFaixa')}}</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <Features v-for="feature in features" :key="feature.id" :heading="feature.head" :text="feature.text" :img-scr="feature.img" :showButton="feature.btn" :wrap-class="feature.class"></Features>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- CTA Section -->
-
-        <section id="cta" class="bg-gray">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-md-offset-2 col-md-8 col-sm-12">
-                        <div class="fadeInUp col-md-6" data-wow-delay="0.4s">
-                          <!--  <section v-if="errored">
-                                <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
-                            </section>
-                            <section v-else>
-                                <div v-if="loading">Loading...</div>
-                                <div v-else v-for="currency in info" :key="currency.description" >
-                                    <span class="big-text">
-                                        {{ currency.rate_float | currencydecimal }}
-                                    </span><p>{{ currency.description }}</p>
-
+                    <section id="portfolio">
+                        '<div class="row">
+                                <div class="col-sm-3">
+                                    <img src="../assets/img/selo-correios_sm.png"/>
                                 </div>
-                            </section> -->
-                            <div>
-                                    <span class="big-text">
-                                        3.800.000
-                                    </span>
-                                <p>Objetos processados/mês</p>
-
-                            </div>
+                                <div class="col-sm-9">
+                                    <h2 class="wow fadeInUp text-center align-middle" data-wow-delay="0.4s">{{$t('textoFaixa')}}</h2>
+                                </div>
+                         </div>
+                        <div class="row">
+                            <Features v-for="feature in features" :key="feature.id" :heading="feature.head" :text="feature.text" :img-scr="feature.img" :showButton="feature.btn" :wrap-class="feature.class"></Features>
                         </div>
-                        <div class="fadeInUp col-md-6" data-wow-delay="0.4s">
-                            <span class="big-text">+ de 17.000 </span>
-                            <p>Empresas atendidas</p>
-                        </div>
-                    </div>
-
+                    </section>
                 </div>
             </div>
-        </section>
+            <section id="cta" class="bg-info">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8 col-sm-12">
+                    <div class="fadeInUp col-md-6" data-wow-delay="0.4s">
+                        <div>
+                                <span class="big-text">
+                                    3.800.000
+                                </span>
+                            <p>Objetos processados/mês</p>
 
+                        </div>
+                    </div>
+                    <div class="fadeInUp col-md-6" data-wow-delay="0.4s">
+                        <span class="big-text">+ de 17.000 </span>
+                        <p>Empresas atendidas</p>
+                    </div>
+                </div>
+            </div>
+         </section>
         <Footer></Footer>
-
         <a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
 </div>
 
@@ -144,7 +116,9 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style scoped>
-
+    .up{
+        margin-top: -35px;
+    }
     .big-text{
        font-size: 3em;
         font-weight: bolder;

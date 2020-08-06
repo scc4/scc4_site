@@ -1,36 +1,38 @@
 <template>
     <transition name="modal-fade">
-            <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription" >
-                <div class="sm-form">
-                    <h5>Login</h5>
-                    <div class="form-group col-md-6">
-                        <input type="number" v-model="agencia" size="3" placeholder="agência" class="form-control form-control-sm" maxlength="3" />
-                    </div>
-                    <div class="form-group">
-                        <input type="email" v-model="email" placeholder="e-mail ou login" class="form-control form-control-sm" />
-                    </div>
+             <div class="back">
+                <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription" >
+                    <div class="sm-form">
+                        <h5>Login</h5>
+                        <div class="form-group col-md-6">
+                            <input type="number" v-model="agencia" size="3" placeholder="agência" class="form-control form-control-sm" maxlength="3" />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" v-model="email" placeholder="e-mail ou login" class="form-control form-control-sm" />
+                        </div>
 
-                    <div class="form-group">
-                        <passwordToglge v-model="senha" ></passwordToglge>
-                        <!-- <input type="password" placeholder="senha" class="form-control form-control-sm" /> -->
-                    </div>
-                    <button type="button" class="btn btn-primary btn-sm" @click="loginPortal()">Entrar</button>
+                        <div class="form-group">
+                            <passwordToglge v-model="senha" ></passwordToglge>
+                            <!-- <input type="password" placeholder="senha" class="form-control form-control-sm" /> -->
+                        </div>
+                        <button type="button" class="btn btn-primary btn-sm" @click="loginPortal()">Entrar</button>
 
-                    <div class="forgot-password">
-                        <a href="#" class="forgot-password mt-2 mb-4">Esqueceu a senha ?</a>
+                        <div class="forgot-password">
+                            <a href="#" class="forgot-password mt-2 mb-4">Esqueceu a senha ?</a>
+                        </div>
+                        <div class="social-icons">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-google" style="color: #2e6da4"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook" style="color: #2e6da4"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" style="color: #2e6da4"></i></a></li>
+                            </ul>
+                        </div>
+                        <strong>Response token:</strong>
+                        <pre>{{output}}</pre>
+                        <button type="button" class="btn btn-danger btn-sm"  @click="close"
+                                aria-label="Close modal">Fechar</button>
                     </div>
-                    <div class="social-icons">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-google" style="color: #2e6da4"></i></a></li>
-                            <li><a href="#"><i class="fa fa-facebook" style="color: #2e6da4"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter" style="color: #2e6da4"></i></a></li>
-                        </ul>
-                    </div>
-                    <strong>Response token:</strong>
-                    <pre>{{output}}</pre>
-                    <button type="button" class="btn btn-danger btn-sm"  @click="close"
-                            aria-label="Close modal">Fechar</button>
-                </div>
+            </div>
         </div>
     </transition>
 </template>
@@ -77,16 +79,28 @@
 
 <style scoped>
 
-
+    .back{
+        z-index: 1000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(7,7,7,0.5);
+    }
     .modal {
         position: absolute !important;
-        right: 30px !important;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%);
         max-width: 300px;
         height: 400px;
         background: transparent;
         overflow-x: auto;
         display: flex;
         flex-direction: column;
+        z-index: 1200;
+        margin-top: 100px;
     }
 
     .btn{
@@ -99,17 +113,15 @@
 
 
     h5{
-        color: white;
+        color: #23527c;
         font-size: 14px;
     }
     .sm-form{
-        /*position: absolute;
-        max-width: 300px;
-        right: 10%;*/
-        background-color: rgba(184, 185, 186, 0.9);
-        padding: 10px;
+        background-color: white;
+        padding: 30px;
         z-index: 100;
-        border-radius: 8px;
+        border-radius: 1px;
+        border: solid 1px #999999;
     }
 
     .forgot-password {
@@ -119,7 +131,7 @@
         text-align: left;
         font-size: 10px;
         padding-top: 3px;
-        color: white;
+        color: #23527c;
         margin: 0;
         font-weight: bolder;
     }

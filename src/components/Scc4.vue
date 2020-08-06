@@ -1,46 +1,45 @@
 <template>
-  <section id="scc4" >
-      <div class="container">
-        <div class="row col-xs-12 align-items-center d-flex">
-            <div class="col-lg-6 col-sm-12">
-              <h1>Um time com competencias nas áreas de Hardware e software</h1>
-                <p>Uma equipe verdadeiramente multidisciplinar que se parece com um coral
-                  acompanhado por uma orquestra: não há nada tão incrível quanto ter todos
-                  esses instrumentos e vozes tocando e cantando juntos, apoiando-se e
-                  tornando o som todo melhor do que a soma de suas partes individuais.</p>
+    <section id="scc4">
+          <section id="team" class="bg-gray" >
+              <div class="container">
+                    <div class="row align-items-center">
+                            <div class="col-lg-6">
+                              <h1>Um time com competencias nas áreas de Hardware e software</h1>
+                                <p>Uma equipe verdadeiramente multidisciplinar que se parece com um coral
+                                  acompanhado por uma orquestra: não há nada tão incrível quanto ter todos
+                                  esses instrumentos e vozes tocando e cantando juntos, apoiando-se e
+                                  tornando o som todo melhor do que a soma de suas partes individuais.</p>
+                            </div>
+                            <div class="col-lg-6">
+                              <img src="../assets/img/team.jpg" class="img-responsive"/>
+                           </div>
+                    </div>
+              </div>
+          </section>
+            <Faixa class="bg-info" :texto="slogan"></Faixa>
+        <div class="container">
+            <div class="row align-items-center" >
+                <div class="col-xs-12 col-md-12 col-lg-8">
+                    <Features v-for="feature in features"
+                              :key="feature.id"
+                              :heading="feature.head"
+                              :text="feature.text"
+                              :img-scr="feature.img"
+                              :showButton="feature.btn"
+                              :wrap-class="feature.class"
+                    ></Features>
+                </div>
+                <div class="col-xs-12 col-md-12 col-lg-4">
+                    <Timeline></Timeline>
+                </div>
             </div>
-            <div class="col-lg-6 col-sm-12 pt-5">
-              <img src="../assets/img/team.jpg" class="img-responsive"/>
-           </div>
-        </div>
       </div>
-      <Faixa class="pt-lg" :texto="slogan"></Faixa>
-      <div class="container pt-lg">
-        <div class="row col-xs-12 align-items-center d-flex">
-            <div class="col-lg-8 col-sm-12 pt-5">
-                <Features v-for="feature in features"
-                          :key="feature.id"
-                          :heading="feature.head"
-                          :text="feature.text"
-                          :img-scr="feature.img"
-                          :showButton="feature.btn"
-                          :wrap-class="feature.class"
-                ></Features>
-            </div>
-            <div class="col-lg-4 col-sm-12">
-                <Timeline></Timeline>
-            </div>
-
-        </div>
-      </div>
-
     <Footer></Footer>
     <!-- Back top -->
     <a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
   </section>
 </template>
 
-<!-- Passar os dados para Timeline, Faixa e Footer para poder reaproveitar nas outras telas -->
 <script>
   import Timeline from "@/components/Timeline";
   import Faixa from "@/components/Faixa";
@@ -84,4 +83,7 @@
 .pt-lg{
     margin-top: 80px;
 }
+    #team{
+        margin-top: -15px;
+    }
 </style>

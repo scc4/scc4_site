@@ -5,48 +5,39 @@
                @click="changeLocale(entry.language)">
               <country-flag :country= "entry.flag" />
             </a>
-    </span>
-  <div class="navbar navbar-default navbar-static-top" id="menu" :style="{ backgroundColor: this.params[$selected].cores[0]}" >
+        </span>
+        <div class="navbar navbar-default navbar-static-top" id="menu" :style="{ backgroundColor: this.params[$selected].cores[0]}" ><div class="container">
+          <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon icon-bar"></span>
+              <span class="icon icon-bar"></span>
+              <span class="icon icon-bar"></span>
+            </button>
+            <a href="index.html" class="navbar-brand">
+              <img v-show="$selected == 0" src="./assets/img/logo_scc4_sm_gray.png" height="35"/>
+              <img v-show="$selected == 1" src="./assets/img/logo_portal_postal.png" height="35"/>
+              <img v-show="$selected == 2" src="./assets/img/logo_boxcubo.png" height="35"/>
+              <img v-show="$selected == 3" src="./assets/img/logo_scc4_sm_gray.png" height="35"/>
+            </a>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right linha">
+              <li  v-bind:class="{active:$selected == 0}">
+                <router-link to="/home"><a herf="#"  >Home</a></router-link>
+              </li>
+              <li  v-bind:class="{active:$selected == 1}">
+                <router-link to="/portalpostal"><a herf="#" >Portal Postal</a></router-link>
+              </li>
+              <li v-bind:class="{active:$selected == 2}">
+                <router-link to="/boxcubo"> <a herf="#" > Boxcubo</a></router-link>
+              <li v-bind:class="{active:$selected == 3}">
+                <router-link to="/contato"><a herf="#">{{$t('contato')}}</a></router-link>
+              </li>
+            </ul>
 
-    <div class="container">
-      <div class="navbar-header">
-        <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon icon-bar"></span>
-          <span class="icon icon-bar"></span>
-          <span class="icon icon-bar"></span>
-        </button>
-        <a href="index.html" class="navbar-brand">
-          <img v-show="$selected == 0" src="./assets/img/logo_scc4_sm_gray.png" height="35"/>
-          <img v-show="$selected == 1" src="./assets/img/logo_portal_postal.png" height="35"/>
-          <img v-show="$selected == 2" src="./assets/img/logo_boxcubo.png" height="35"/>
-          <img v-show="$selected == 3" src="./assets/img/logo_scc4_sm_gray.png" height="35"/>
-        </a>
-      </div>
+          </div>
+          <LoginBoxCubo v-if ="$selected === 2"></LoginBoxCubo>
 
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right linha">
-          <li  v-bind:class="{active:$selected == 0}">
-            <router-link to="/home"><a herf="#"  @click="closeModal" >Home</a></router-link>
-          </li>
-          <li  v-bind:class="{active:$selected == 1}">
-            <router-link to="/portalpostal"><a herf="#"  @click="closeModal" >Portal Postal</a></router-link>
-          </li>
-          <li v-bind:class="{active:$selected == 2}">
-            <router-link to="/boxcubo"> <a herf="#"  @click="closeModal" > Boxcubo</a></router-link>
-          <li v-bind:class="{active:$selected == 3}">
-            <router-link to="/contato"><a herf="#" @click="closeModal" >{{$t('contato')}}</a></router-link>
-          </li>
-          <li>
-            <a a herf="#"  @click="showModal" >Login</a>
-          </li>
-          <li>
-
-          </li>
-        </ul>
-
-      </div>
-      <ModalLogin v-if ="$selected === 1"  v-show="isModalVisible" @close="closeModal"></ModalLogin>
-      <ModalLoginBox v-if ="$selected === 2"  v-show="isModalVisible" @close="closeModal"></ModalLoginBox>
     </div>
   </div>
       <Canvas
@@ -66,20 +57,17 @@
 import Canvas from "@/components/Canvas";
 import i18n from '@/plugins/i18n';
 import CountryFlag from 'vue-country-flag';
-import ModalLogin from "@/components/ModalLogin";
-import ModalLoginBox from "@/components/ModalLoginBox";
+import LoginBoxCubo from "@/components/LoginBoxCubo";
 
 export default {
     name: 'App',
    components: {
-     ModalLoginBox,
-     ModalLogin,
+     LoginBoxCubo,
     Canvas,
      CountryFlag
    },
     data() {
     return {
-      isModalVisible: false,
       languages: [
         { flag: 'us', language: 'en', title: 'English' },
         { flag: 'br', language: 'pt-br', title: 'Português' }
@@ -113,13 +101,7 @@ export default {
   methods: {
       changeLocale(locale) {
         i18n.locale = locale;
-      },
-    showModal() {
-      this.isModalVisible = true;
-    },
-    closeModal() {
-      this.isModalVisible = false;
-    }
+      }
     }
 
   }
@@ -143,6 +125,19 @@ export default {
   .router-link-active{
     color: white;
   }
+  .btn-primary-outline {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    margin-top: 20px;
+  }
+  .btn-primary-outline:hover {
+    background-color: #23527c;
+    border-color: white;
+    color: white;
+    margin-top: 20px;
+  }
+
   .language{
     position: fixed;
     right: 60px;

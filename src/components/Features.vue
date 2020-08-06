@@ -1,5 +1,4 @@
 <template>
-
         <div :class="wrapClass">
             <div class="card-content">
                 <div class="card-img">

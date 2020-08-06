@@ -1,49 +1,49 @@
 <template>
-    <div class="">
-        <div class="row no-gutter">
+    <section>
+        <div class="row no-gutter ">
             <div class="col-xs-3">
                 <a href="#" >
-                    <img src="http://placehold.it/350x450" class="img-responsive">
-                </a>
-            </div>
-            <div class="col-xs-3">
-                <a href="#" >
-                    <img src="http://placehold.it/350x450/CCC" class="img-responsive">
-                </a>
-            </div>
-            <div class="col-xs-3 ">
-                <a href="#" >
-                    <img src="http://placehold.it/350x450/AAA" class="img-responsive">
-                </a>
-            </div>
-            <div class="col-xs-3 ">
-                <a href="#" >
-                    <img src="http://placehold.it/350x450/888" class="img-responsive">
+                    <img src="../assets/img/ect.png" class="img-responsive"/>
                 </a>
             </div>
             <div class="col-xs-3">
                 <a href="#" >
-                    <img src="http://placehold.it/350x450/777" class="img-responsive">
+                    <img src="../assets/img/ect.png" class="img-responsive"/>
                 </a>
             </div>
             <div class="col-xs-3 ">
                 <a href="#" >
-                    <img src="http://placehold.it/350x450/999" class="img-responsive">
+                    <img src="../assets/img/ect.png" class="img-responsive"/>
+                </a>
+            </div>
+                <div class="col-xs-3 ">
+                    <a href="#" >
+                        <img src="../assets/img/ect.png" class="img-responsive"/>
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="#" >
+                        <img src="../assets/img/ect.png" class="img-responsive"/>
+                    </a>
+                </div>
+                <div class="col-xs-3 ">
+                    <a href="#" >
+                        <img src="../assets/img/ect.png" class="img-responsive"/>
+                    </a>
+                </div>
+            <div class="col-xs-3 ">
+                <a href="#" >
+                    <img src="../assets/img/ect.png" class="img-responsive"/>
                 </a>
             </div>
             <div class="col-xs-3 ">
                 <a href="#" >
-                    <img src="http://placehold.it/350x450/AAA" class="img-responsive">
-                </a>
-            </div>
-            <div class="col-xs-3 ">
-                <a href="#" >
-                    <img src="http://placehold.it/350x450/CCC" class="img-responsive">
+                    <img src="../assets/img/ect.png" class="img-responsive"/>
                 </a>
             </div>
 
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -55,6 +55,7 @@
 <style scoped>
     .row.no-gutter [class*='col-'] {
         padding:1px;
+        margin-top:55px;
 
     }
 

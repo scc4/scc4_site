@@ -3,13 +3,19 @@
    <!-- <LoginPortal v-if ="login === 1"></LoginPortal>
     <LoginBoxCubo v-if ="login === 2"></LoginBoxCubo>-->
     <div class="row" :style="{'backgroundColor': shapeColors[0]}">
-         <div  class="col-sm-12 col-md-8 col-lg-6  pd " >
-            <h1 class="wow fadeInUp" data-wow-delay="0.6s">{{slogan}}</h1>
-            <h4 class="wow fadeInUp" data-wow-delay="0.8s">{{msg}}</h4>
+         <div  class="col-sm-12 col-md-8 col-lg-6  pd" >
+            <h2 class="wow fadeInUp" data-wow-delay="0.6s">{{slogan}}</h2>
+            <p class="wow fadeInUp text-justify" data-wow-delay="0.8s">{{msg}}</p>
+             <button v-show="login == 1" class="btn btn-primary-outline"
+                     @click="showModal"
+             >
+                 <i class="fa fa-sign-in"></i>
+                 Faça seu Login
+             </button>
           </div>
     </div>
-    <canvas id="waves" :style="{'borderColor': shapeColors[0]}"></canvas>
-
+    <canvas id="waves" :style="{'borderColor': shapeColors[0]}" class="bg-gray"></canvas>
+    <ModalLogin v-show="isModalVisible" @close="closeModal"></ModalLogin>
   </section>
 </template>
 
@@ -17,10 +23,18 @@
 
   import { TimelineMax } from 'gsap';
   import { Power3 } from 'gsap';
+  import ModalLogin from "@/components/ModalLogin";
 
 
 export default {
   name: 'Canvas',
+    components: {ModalLogin},
+    data(){
+      return{
+
+          isModalVisible: false
+      }
+    },
   props: {
     slogan: String,
     msg: String,
@@ -39,15 +53,19 @@ export default {
     this.canvasOn('#00d67e', '#de00ff', '#ff9c00')
     },
   methods:{
-          setColors(){
 
-        },
+    showModal() {
+        this.isModalVisible = true;
+    },
+    closeModal() {
+        this.isModalVisible = false;
+    },
 
         canvasOn(corA, corB, CorC){
           const canvas = document.querySelector("#waves")
           let context = canvas.getContext("2d")
           const pictureWidth = 1000
-          const pictureHeight = 250
+          const pictureHeight = 240
           const setCanvasSize = () => {
             const deviceRatio = window.devicePixelRatio || 1
             const pictureRatio = window.innerWidth / pictureWidth
@@ -125,8 +143,16 @@ export default {
   }
 .pd{
     color: white;
-    padding-left: 50px;
-    margin-top: -10px;
+    padding-left: 80px;
+    padding-right: 80px;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.pd p{
+    color: white;
 }
 
 .container{

@@ -13,7 +13,8 @@ const messages = {
         inicio:[
             {
                 slogan: "Apaixonados por TI",
-                msg: "Acreditamos que, em um futuro próximo, todo processo de logistica será automatizado."
+                msg: "Acreditamos que a tecnologia pode dobrar os processos tradicionais e capacitar os indivíduos por meio da informação.\n" +
+                    "Isso encoraja a noção de direitos humanos, literalmente, com o toque de uma mão."
             },
             {
                 slogan: "A gente inova." ,
