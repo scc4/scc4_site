@@ -14,22 +14,22 @@
               <span class="icon icon-bar"></span>
             </button>
             <a href="index.html" class="navbar-brand">
-              <img v-show="$selected == 0" src="./assets/img/logo_scc4_sm_gray.png" height="35"/>
-              <img v-show="$selected == 1" src="./assets/img/logo_portal_postal.png" height="35"/>
-              <img v-show="$selected == 2" src="./assets/img/logo_boxcubo.png" height="35"/>
-              <img v-show="$selected == 3" src="./assets/img/logo_scc4_sm_gray.png" height="35"/>
+              <img v-show="$selected == 0" src="./assets/img/logo_scc4_white.png" height="35"/>
+              <img v-show="$selected == 1" src="./assets/img/logo_portal_postal_white.png" height="35"/>
+              <img v-show="$selected == 2" src="./assets/img/logo_boxcubo_white.png" height="35"/>
+              <img v-show="$selected == 3" src="./assets/img/logo_scc4_white.png" height="35"/>
             </a>
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right linha">
               <li  v-bind:class="{active:$selected == 0}">
-                <router-link to="/home"><a herf="#"  >Home</a></router-link>
+                <router-link to="/home"><a herf="#">Home</a></router-link>
               </li>
               <li  v-bind:class="{active:$selected == 1}">
-                <router-link to="/portalpostal"><a herf="#" >Portal Postal</a></router-link>
+                <router-link to="/portalpostal"><a herf="#">Portal Postal</a></router-link>
               </li>
               <li v-bind:class="{active:$selected == 2}">
-                <router-link to="/boxcubo"> <a herf="#" > Boxcubo</a></router-link>
+                <router-link to="/boxcubo"> <a herf="#">Boxcubo</a></router-link>
               <li v-bind:class="{active:$selected == 3}">
                 <router-link to="/contato"><a herf="#">{{$t('contato')}}</a></router-link>
               </li>
