@@ -1,5 +1,6 @@
 <template>
     <transition name="modal-fade">
+        <div class="back" @click="close">
             <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription" >
                 <div class="sm-form">
 
@@ -19,6 +20,7 @@
                         </ul>
                     </div>
                 </div>
+           </div>
         </div>
     </transition>
 </template>
@@ -58,16 +60,28 @@
 
 <style scoped>
 
-
+    .back{
+        z-index: 1000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(7,7,7,0.5);
+    }
     .modal {
         position: absolute !important;
-        right: 30px !important;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%);
         max-width: 300px;
         height: 400px;
         background: transparent;
         overflow-x: auto;
         display: flex;
         flex-direction: column;
+        z-index: 1200;
+        margin-top: 100px;
     }
 
     .btn{
@@ -80,17 +94,15 @@
 
 
     h5{
-        color: white;
+        color: #23527c;
         font-size: 14px;
     }
     .sm-form{
-        /*position: absolute;
-        max-width: 300px;
-        right: 10%;*/
-        background-color: rgba(184, 185, 186, 0.9);
-        padding: 10px;
+        background-color: white;
+        padding: 30px;
         z-index: 100;
-        border-radius: 8px;
+        border-radius: 1px;
+        border: solid 1px #999999;
     }
 
     .forgot-password {
@@ -100,7 +112,7 @@
         text-align: left;
         font-size: 10px;
         padding-top: 3px;
-        color: white;
+        color: #23527c;
         margin: 0;
         font-weight: bolder;
     }
@@ -112,6 +124,7 @@
         font-size: 0.5em;
         color: #222222;
         padding-top: 5px;
+        margin-top: 15px;
     }
 
     .social-icons ul {

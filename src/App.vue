@@ -34,10 +34,7 @@
                 <router-link to="/contato"><a herf="#">{{$t('contato')}}</a></router-link>
               </li>
             </ul>
-
           </div>
-          <LoginBoxCubo v-if ="$selected === 2"></LoginBoxCubo>
-
     </div>
   </div>
       <Canvas
@@ -57,12 +54,10 @@
 import Canvas from "@/components/Canvas";
 import i18n from '@/plugins/i18n';
 import CountryFlag from 'vue-country-flag';
-import LoginBoxCubo from "@/components/LoginBoxCubo";
 
 export default {
     name: 'App',
    components: {
-     LoginBoxCubo,
     Canvas,
      CountryFlag
    },

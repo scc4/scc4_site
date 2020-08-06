@@ -56,8 +56,8 @@
                     <div class="col-xs-12 col-sm-12 col-lg-8">
                         <img src="../assets/img/future-postal.jpg" class="img-responsive"/>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-lg-4 ">
-                        <ImageGrid></ImageGrid>
+                    <div class="col-xs-12 col-sm-12 col-lg-4">
+                        <Carrousel :autoplay="true" :perPage="3">3</Carrousel>
                     </div>
                 </div>
             </div>
@@ -86,14 +86,25 @@
 
 <script>
     import Footer from "@/components/Footer";
-    import ImageGrid from "@/components/ImageGrid";
+    import Carrousel from "@/components/Carrousel";
     export default {
         name: "Boxcubo",
-        components: {ImageGrid, Footer}
+        components: {Carrousel, Footer}
     }
 </script>
 
 <style scoped>
+    .align-items-center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    @media (max-width:990px ) {
+        .align-items-center{
+            flex-direction: column;
+        }
+    }
     .space-medium{
         margin-top: -35px;
         padding-bottom: 50px;

@@ -8,12 +8,14 @@ import axios from 'axios';
 import VueAxios from 'vue-axios';
 import i18n from '@/plugins/i18n';
 import CountryFlag from 'vue-country-flag'
+import VueCarousel from 'vue-carousel';
+
 
 Vue.component('country-flag', CountryFlag)
 
 
 Vue.config.productionTip = false;
-Vue.use(VueAxios, axios);
+Vue.use(VueAxios, axios, VueCarousel);
 Vue.config.productionTip = false;
 
 /*

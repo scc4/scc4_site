@@ -3,19 +3,26 @@
    <!-- <LoginPortal v-if ="login === 1"></LoginPortal>
     <LoginBoxCubo v-if ="login === 2"></LoginBoxCubo>-->
     <div class="row" :style="{'backgroundColor': shapeColors[0]}">
-         <div  class="col-sm-12 col-md-8 col-lg-6  pd" >
+         <div  class="col-sm-12 col-md-8 col-lg-6 pd" >
             <h2 class="wow fadeInUp" data-wow-delay="0.6s">{{slogan}}</h2>
             <p class="wow fadeInUp text-justify" data-wow-delay="0.8s">{{msg}}</p>
-             <button v-show="login == 1" class="btn btn-primary-outline"
+             <button v-if="login == 1" class="btn btn-primary-outline"
                      @click="showModal"
              >
                  <i class="fa fa-sign-in"></i>
                  Faça seu Login
              </button>
+             <button v-if="login == 2" class="btn btn-primary-outline btn-boxcubo"
+                     @click="showModal"
+             >
+                 <i class="fa fa-sign-in"></i>
+                 Área do cliente
+             </button>
           </div>
     </div>
     <canvas id="waves" :style="{'borderColor': shapeColors[0]}" class="bg-gray"></canvas>
-    <ModalLogin v-show="isModalVisible" @close="closeModal"></ModalLogin>
+        <ModalLogin v-if="login == 1" v-show="isModalVisible" @close="closeModal"></ModalLogin>
+        <ModalLoginBox v-if="login == 2" v-show="isModalVisible" @close="closeModal" ></ModalLoginBox>
   </section>
 </template>
 
@@ -24,11 +31,12 @@
   import { TimelineMax } from 'gsap';
   import { Power3 } from 'gsap';
   import ModalLogin from "@/components/ModalLogin";
+  import ModalLoginBox from "@/components/ModalLoginBox";
 
 
 export default {
   name: 'Canvas',
-    components: {ModalLogin},
+    components: {ModalLoginBox, ModalLogin},
     data(){
       return{
 
@@ -159,6 +167,9 @@ export default {
   width: 100%;
   color: white;
 }
+    .btn-boxcubo:hover{
+        background-color: #FF584D;
+    }
 
 
 </style>

@@ -1,6 +1,6 @@
 <template>
     <transition name="modal-fade">
-             <div class="back">
+             <div class="back" @click="close">
                 <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription" >
                     <div class="sm-form">
                         <h5>Login</h5>
@@ -29,8 +29,6 @@
                         </div>
                         <strong>Response token:</strong>
                         <pre>{{output}}</pre>
-                        <button type="button" class="btn btn-danger btn-sm"  @click="close"
-                                aria-label="Close modal">Fechar</button>
                     </div>
             </div>
         </div>
@@ -143,6 +141,7 @@
         font-size: 0.5em;
         color: #222222;
         padding-top: 5px;
+        margin-top: 15px;
     }
 
     .social-icons ul {

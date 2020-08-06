@@ -12,7 +12,7 @@ const routes = [
         meta: { sel: 0 }
     },
     {
-        path: '/e',
+        path: '/',
         name: 'home',
         component: () => import('../components/Scc4.vue'),
         meta: { sel: 0 }
