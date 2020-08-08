@@ -7,13 +7,15 @@
                 <div class="card-desc">
                     <h3>{{heading}}</h3>
                     <p>{{text}}</p>
-                    <button v-show="showButton" type="button" class="btn-card" >{{$t('saibaMais')}}</button>
+                    <button v-show="showButton" type="button" class="btn-card" @click="scroll('#contato')" >{{$t('saibaMais')}}</button>
                 </div>
             </div>
         </div>
 </template>
 
 <script>
+
+    import VueScrollTo from 'vue-scrollto'
     export default {
         name: "Features",
         props: {
@@ -28,6 +30,9 @@
             resolve_img_url: function (path) {
                 let images = require.context('../assets/img/', false, /\.png$|\.jpg$/)
                 return images("./"+path)
+            },
+            scroll(element) {
+                VueScrollTo.scrollTo(element)
             }
         }
     }
@@ -106,30 +111,22 @@
         padding: 0;
     }
     .btn-card{
-        background-color: #2e6da4;
-        color: #fff;
-        box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
-        padding: .84rem 2.14rem;
-        font-size: 0.9em;
-        -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
-        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
-        -o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
-        margin: 0;
-        border: 0;
-        -webkit-border-radius: .125rem;
-        border-radius: .125rem;
-        cursor: pointer;
+        border-radius: 2px;
+        background-color: #204d74;
+        border: none;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #ffffff;
         text-transform: uppercase;
-        white-space: normal;
-        word-wrap: break-word;
-        color: #fff;
+        margin-top: 30px;
+        height: 50px;
+        padding: 6px 12px;
 
     }
     .btn-card:hover {
-        background: #23527c;
+        background-color: #222;
     }
+
     a.btn-card {
         text-decoration: none;
         color: #fff;

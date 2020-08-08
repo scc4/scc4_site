@@ -1,6 +1,6 @@
 <template>
     <transition name="modal-fade">
-        <div class="back" @click="close">
+        <div class="back" @click="onClickOutside">
             <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription" >
                 <div class="sm-form">
 
@@ -40,9 +40,13 @@
             }
         },
    methods: {
-        close() {
-            this.$emit('close');
-        },
+       onClickOutside (event) {
+           if (event.target.className == 'back') {
+               this.$emit('close');
+               // close modal here
+               document.body.removeEventListener("click", this.event);
+           }
+       },
        loginBoxCubo(){
            const requestOptions = {
                method: "GET",

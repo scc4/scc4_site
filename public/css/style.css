@@ -890,13 +890,7 @@ footer .footer-copyright p {
         display: -ms-flexbox!important;
         display: flex!important;
     }
-    .btn-primary-outline {
-        background-color: transparent;
-        border-color: white;
-        color: white;
-        margin-top: 20px;
-        border-radius: 0 !important;
-    }
+
 }
 
 

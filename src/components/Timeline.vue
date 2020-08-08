@@ -1,15 +1,14 @@
 <template>
     <div class="center-block central">
 
-                <h2>Nossa História</h2>
+                <h2>{{$t('history')}}</h2>
                 <ul class="timeline">
                     <li v-for="item in items" :key="item.id">
                         <a href="#" class="float-right">{{item.date}}</a>
-                        <a target="_blank" href="#">{{item.type}}</a>
-                        <p>{{item.content}}</p>
+                        <a target="_blank" href="#">{{$t('items')[item.id].type}}</a>
+                        <p>{{$t('items')[item.id].content}}</p>
                     </li>
                 </ul>
-
     </div>
 </template>
 <script>
@@ -18,20 +17,30 @@
         data () {
             return {
                 items: [
-
+                    {
+                        id:0,
+                        date: '2008 - ',
+                        color: '#dcdcdc'
+                    },
                     {
                         id:1,
-                        date: '2008 - ',
-                        color: '#dcdcdc',
-                        type: 'Início',
-                        content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '
+                        date: '2010 - ',
+                        color: '#dcdcdc'
                     },
                     {
                         id:2,
+                        date: '2011 - ',
+                        color: '#dcdcdc'
+                    },
+                    {
+                        id:3,
+                        date: '2014 - ',
+                        color: '#dcdcdc'
+                    },
+                    {
+                        id:4,
                         date: '2019 - ',
-                        color: '#dcdcdc',
-                        type: 'Premio Melhor empresa TI',
-                        content: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '
+                        color: '#F9C75A'
                     }
                 ]
             }
@@ -75,6 +84,9 @@
         width: 20px;
         height: 20px;
         z-index: 400;
+    }
+    ul.timeline p{
+        font-size: 18px;
     }
 
 </style>

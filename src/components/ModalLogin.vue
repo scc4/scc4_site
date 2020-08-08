@@ -1,7 +1,7 @@
 <template>
     <transition name="modal-fade">
-             <div class="back" @click="close">
-                <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription" >
+             <div class="back" @click="onClickOutside">
+                <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
                     <div class="sm-form">
                         <h5>Login</h5>
                         <div class="form-group col-md-6">
@@ -52,25 +52,31 @@
             }
         },
    methods: {
-        close() {
-            this.$emit('close');
+                onClickOutside (event) {
+                   if (event.target.className == 'back') {
+                       this.$emit('close');
+                       // close modal here
+                       document.body.removeEventListener("click", this.event);
+                   }
+               },
+               loginPortal(){
+                   const requestOptions = {
+                       method: "POST",
+                       headers: { "Content-Type": "application/json" },
+                       body: JSON.stringify({ login: this.email, senha: this.senha})
+                   };
+                   console.log(JSON.stringify({ login: this.email, senha: this.senha}));
+                   fetch("https://portalpostal.com.br/rest/cliente/usuario/login?idEmpresa=" +this.agencia, requestOptions)
+                       .then(response => response.json())
+                       .then(data => {
+                           console.log(data)
+                           this.output = data.data.cliente_usuario.token
+                       })
+                       .catch(function (error) {this.output = error })
+               }
         },
-       loginPortal(){
-           const requestOptions = {
-               method: "POST",
-               headers: { "Content-Type": "application/json" },
-               body: JSON.stringify({ login: this.email, senha: this.senha})
-           };
-           console.log(JSON.stringify({ login: this.email, senha: this.senha}));
-           fetch("https://portalpostal.com.br/rest/cliente/usuario/login?idEmpresa=" +this.agencia, requestOptions)
-               .then(response => response.json())
-               .then(data => {
-                   console.log(data)
-                   this.output = data.data.cliente_usuario.token
-               })
-               .catch(function (error) {this.output = error })
-       }
-    }
+
+
     }
 
 </script>
