@@ -160,6 +160,11 @@
         align-items: center;
         flex-direction: column;
     }
+    @media (max-width: 420px) {
+        .pd {
+            min-height: 400px;
+        }
+    }
 
     .pd p {
        /* color: white;*/

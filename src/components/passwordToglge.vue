@@ -4,6 +4,7 @@
                    :type="[tipo]"
                    @input="onInputChange"
                    v-model="inputValue"
+                   placeholder="senha"
             />
             <div class="input-group-addon">
                 <a href="#"><i :class="[classe]" style="color: #2e6da4" @click="toggleEye()"></i></a>

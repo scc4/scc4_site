@@ -10,17 +10,17 @@ const messages = {
         inicio:[
             {
                 slogan: "Entregamos tecnologia",
-                msg: "Por trás de qualquer coisa simples, existe uma cadeia de suprimentos complexa."
+                msg: "E simplificamos a sua logística. "
 
                                 },
             {
-                slogan: "A gente inova." ,
-                msg: "Para deixar a sua experiência de envio pelos Correios ainda melhor e ajudar você no seu dia a dia."
+                slogan: "Inovamos. " ,
+                msg: "Para deixar a sua experiência de envio pelos Correios melhor ."
 
             },
             {
                 slogan: "n.º 1 do Brasil",
-                msg: "Com mais de 60% do market share a Boxcubo é lider de mercado no segmento de cubagem estática."
+                msg: "Com mais de 60% do market share a Boxcubo é líder de mercado no segmento de cubagem estática."
 
             },
             {
@@ -29,18 +29,18 @@ const messages = {
 
             }
         ],
-        lampadaTitulo: 'Ajudamos você',
-        lampadaTexto: 'A fase de entrega é onde você pode desenvolver relacionamentos poderosos com seu cliente. ' +
-            'E a experiência de envio pode ser tão importante quanto o produto. \n' +
-            'Por isso nosso time conta com desenvolvedores, técnicos e engenheiros que além de tecnologia são especialistas em logística. ',
+        lampadaTitulo: 'Tecnologia para melhores resultados',
+        lampadaTexto: 'Somos uma equipe multidisciplinar, especializada em combinar tecnologia e logística. ' +
+            'Podemos ajudar sua empresa a redesenhar e digitalizar seus processos. ',
+
         faixascc4: '"O coração e a alma da empresa são criatividade e inovação." - Bob Iger',
         featuresscc4:[
             {
-                text: 'Conheça a máquina de cubagem estática mais vendida no Brasil',
+                text: 'Conheça a máquina de cubagem estática mais vendida no Brasil.',
                 head: 'BOXCUBO'
             },
             {
-                text: 'O melhor sistema para operação e e gestão de AGFs. e comunicação integrada com os clientes.',
+                text: 'Sistema de operação, gestão e comunicação com clientes. O melhor para agências de Correios Franqueadas.',
                 head: 'PORTAL POSTAL'
             }
         ],
@@ -48,27 +48,27 @@ const messages = {
         items: [
             {
                 type: 'Plataforma Hoito',
-                content: 'Criada a primeira plataforma para acompanhamento e interção com clientes de agências de Correios online.'
+                content: 'Criada a primeira plataforma online para acompanhamento e interação de clientes com agências de Correios.'
             },
             {
                 type: 'Portal Postal',
-                content: 'Criamos o Portal Postal para dar resposta à um mundo em digitalização. '
+                content: 'Em consonância ao mundo em digitalização, criamos o Portal Postal. '
             },
             {
-                type: 'Pré postagem',
-                content: 'Primeiro sitema a utilizar etiquetas de pré postagem. '
+                type: 'Pré-postagem',
+                content: 'Primeiro sistema a utilizar etiquetas de pré-postagem. '
             },
             {
                 type: 'Boxcubo',
-                content: 'Primeira máquina de cubagem estática para agências de Correios. '
+                content: 'Desenvolvemos a primeira máquina de cubagem estática para agências de Correios. '
             },
             {
                 type: 'Reconhecimento',
-                content: 'Ganhamos o selo UX dos Correios. '
+                content: 'Ganhamos a certificação UX dos Correios. '
             }
         ],
 
-        contato: 'Contato',
+        contato: 'Fale conosco',
         administrativo: 'Administrativo',
         comercial: 'Comercial',
         suporte: 'Suporte',
@@ -77,27 +77,43 @@ const messages = {
         seunome: 'Seu nome',
         seuemail:'Seu email',
         seutelefone:'Seu telefone',
-        suamensagem: 'Sua Mensagem',
-        enviar: 'Enviar'
+        suamensagem: 'Sua mensagem',
+        enviar: 'Enviar',
+
+        featuresportal:[
+            {
+                texto: 'Envio automático de todas as atualizações de rastreamento da sua encomenda. Em breve também por Whatsapp. ',
+                heading: 'Seu cliente atualizado'
+            },
+            {
+                texto: 'Nosso sistema registra uma foto de todas as suas encomendas no momento da pesagem. Confira o tamanho e peso de todas as suas caixas. ',
+                heading: 'Imagem da sua caixa'
+            },
+            {
+                texto: 'Integre seu ERP, loja virtual ou marketplace com o Portal Postal. Muito mais agilidade e organização na geração e conferencia de etiquetas.  ',
+                heading: 'Totalmente integrado'
+            },
+            {
+                texto: 'Procure por nossos Apps na Google Play ou na Apple Store e tenha controle total de seus envios diretamente do seu telefone. ',
+                heading: 'Apps Android e IOS'
+            }
+        ]
+
     },
+
     'en':{
-
-
         inicio:[
             {
                 slogan: "We deliver technology",
-                msg: "Behind anything simple, there is a complex supply chain."
-
+                msg: "To keep logistics simple."
             },
             {
-                slogan: "Post Office best system",
-                msg: "To make your postage experience even better and help you in your day to day."
-
+                slogan: "Innovation",
+                msg: "To make your postal experience better."
             },
             {
                 slogan: "Brazil`s n.º 1",
                 msg: "Holding more than 60% of market share, Boxcubo is the leadership in static dimensioning and cubing system."
-
             }, {
                 slogan: "Talk to us",
                 msg: "Comunication is the key. We´d be pleased to hear from you."
@@ -105,10 +121,11 @@ const messages = {
             }
         ],
         lampadaTitulo: 'We can help you',
-        lampadaTexto: 'The delivery phase is where you can develop powerful relationships with your customer. ' +
-            'And the shipping experience can be just as important as the product. ' +
-            'That is why our team includes developers, technicians and engineers who, in addition to technology, are specialists in logistics. ',
+        lampadaTexto: 'We are a multidisciplinary team, specialized in combining technology and logistics. ' +
+            'We can help your company redesign and turn your processes digital. ',
+
         faixascc4: '"The heart and soul of the company is creativity and innovation." - Bob Iger',
+
         featuresscc4:[
             {
                 text: 'Discover the best-selling static cubing and weighing system in Brazil.',
@@ -118,13 +135,13 @@ const messages = {
                 text: 'The best system for operation and management of AGFs and integrated communication with customers.',
                 head: 'PORTAL POSTAL'
             }
-
         ],
+
         history: 'Our history',
         items: [
             {
                 type: 'Plataforma Hoito',
-                content: 'Developed the first system for monitoring and interacting with customers online  for post offices.'
+                content: 'Developed the first system for monitoring and interacting with customers online for post offices. '
             },
             {
                 type: 'Portal Postal',
@@ -136,14 +153,15 @@ const messages = {
             },
             {
                 type: 'Boxcubo',
-                content: 'First static cubing machine for post offices.'
+                content: 'First static cubing machine for post offices. '
             },
             {
                 type: 'Acknowledgment',
                 content: 'We got the UX certification from Correios. '
             }
         ],
-        contato: 'Contact',
+
+        contato: 'Contact us',
         administrativo: 'Administration',
         comercial: 'Sales',
         suporte: 'Support',
@@ -153,7 +171,27 @@ const messages = {
         seuemail:'Your email',
         seutelefone:'Your phone',
         suamensagem: 'Your Menssage',
-        enviar: 'Send'
+        enviar: 'Send',
+
+        featuresportal:[
+            {
+                texto: 'Automatic sending of all tracking updates for your order. ',
+                heading: 'Update your client'
+            },
+            {
+                texto: 'Nosso sistema registra uma foto de todas as suas encomendas no momento da pesagem. Confira o tamanho e peso de todas as suas caixas. ',
+                heading: 'Imagem da sua caixa'
+            },
+            {
+                texto: 'Integre seu ERP, loja virtual ou marketplace com o Portal Postal. Muito mais agilidade e organização na geração e conferencia de etiquetas.  ',
+                heading: 'Totalmente integrado'
+            },
+            {
+                texto: 'Procure por nossos Apps na Google Play ou na Apple Store e tenha controle total de seus envios diretamente do seu telefone. ',
+                heading: 'Apps Android e IOS'
+            }
+        ]
+
     }
 };
 const i18n = new VueI18n({

@@ -1,16 +1,18 @@
 <template>
-        <div :class="wrapClass">
+        <div class="card-child">
+            <div :class="wrapClass">
             <div class="card-content">
                 <div class="card-img">
                     <img :src="resolve_img_url(imgScr)" alt="">
                 </div>
-                <div class="card-desc">
+                <div class="card-desc" >
                     <h3>{{heading}}</h3>
                     <p>{{text}}</p>
                     <button v-show="showButton" type="button" class="btn-card" @click="scroll('#contato')" >{{$t('saibaMais')}}</button>
                 </div>
             </div>
-        </div>
+            </div>
+    </div>
 </template>
 
 <script>
@@ -25,6 +27,10 @@
             showButton: Boolean,
             btnURL: String,
             wrapClass: String
+        },
+        data(){
+            return{
+            }
         },
         methods: {
             resolve_img_url: function (path) {
@@ -85,6 +91,10 @@
         margin:0;
         padding:10px 5px;
         line-height: 0;
+    }
+
+    .card-child{
+
     }
     .card-desc {
         padding: 1.25rem;

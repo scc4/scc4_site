@@ -87,22 +87,17 @@
                 </div>
             </div>
         </section>
-        <div class="row ">
-            <Contato id="contato" class="pt-lg"></Contato>
-        </div>
-        <Footer></Footer>
+
     </div>
 
 </template>
 
 <script>
-    import Footer from "@/components/Footer";
     import Carrousel from "@/components/Carrousel";
-    import Contato from "@/components/Contato";
 
     export default {
         name: "Boxcubo",
-        components: {Contato, Carrousel, Footer}
+        components: {Carrousel}
     }
 </script>
 

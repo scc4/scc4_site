@@ -6,7 +6,7 @@
                     '
                     <div class="row">
                         <div class="col-sm-3">
-                            <img src="../assets/img/selo-correios_sm.png"/>
+                            <img src="../assets/img/Selo_Certicacao_Correios_UX_negativa.png"/>
                         </div>
                         <div class="col-sm-9">
                             <h2 class="wow fadeInUp text-center align-middle" data-wow-delay="0.4s">
@@ -14,9 +14,14 @@
                         </div>
                     </div>
                     <div class="row">
-                        <Features v-for="feature in features" :key="feature.id" :heading="feature.head"
-                                  :text="feature.text" :img-scr="feature.img" :showButton="feature.btn"
-                                  :wrap-class="feature.class"></Features>
+                        <Features v-for="feature in features2"
+                                  :key="feature.id"
+                                  :heading="$t('featuresportal')[feature.id].heading"
+                                  :text="$t('featuresportal')[feature.id].texto"
+                                  :img-scr="feature.img"
+                                  :showButton="feature.btn"
+                                  :wrap-class="feature.class"
+                        ></Features>
                     </div>
                 </section>
             </div>
@@ -40,10 +45,6 @@
                 </div>
             </div>
         </section>
-        <div class="row ">
-            <Contato id="contato" class="pt-lg"></Contato>
-        </div>
-        <Footer></Footer>
     </div>
 
 </template>
@@ -51,52 +52,40 @@
 
 <script>
     import Features from "@/components/Features";
-    import Footer from "@/components/Footer";
-    import Contato from "@/components/Contato";
 
     export default {
         name: 'PortalPostal',
-        components: {Contato, Footer, Features},
+        components: {Features},
         data() {
             return {
                 info: null,
                 loading: true,
                 errored: false,
-                features: [{
-                    id: 0,
-                    img: '3675555.jpg',
-                    text: 'Envie por e-mail para o destinatário ou remetente todas as atualizações de rastreamento da sua encomenda. (Em breve também por whatsapp)',
-                    head: 'Seu cliente atualizado',
-                    btn: true,
-                    class: 'col-md-3 space'
-                },
+                features2: [{
+                        id: 0,
+                        img: '3675555.jpg',
+                        btn: true,
+                        class: 'col-md-3 space'
+                    },
                     {
                         id: 1,
                         img: 'scan-box1.jpg',
-                        text: 'Nosso sistema registra uma foto de todas as suas encomendas no momento da pesagem. Confira o tamanho e peso de todas as suas caixas.',
-                        head: 'Imagem da sua caixa',
                         btn: true,
                         class: 'col-md-3 space'
                     },
                     {
                         id: 2,
                         img: 'onlineShop.jpg',
-                        text: 'Integre seu ERP, loja virtual ou marketplace com o Portal Postal. Muito mais agilidade e organização na geração e conferencia de etiquetas.',
-                        head: 'Totalmente integrado',
                         btn: true,
                         class: 'col-md-3 space'
                     },
                     {
-                        id: 4,
+                        id: 3,
                         img: 'apps.jpg',
-                        text: 'Procure por nossos Apps na Google Play ou na Apple Store e tenha controle total de seus envios diretamente do seu telefone.',
-                        head: 'Apps Android e IOS',
                         btn: true,
                         class: 'col-md-3 space'
                     }
-                ],
-
-
+                ]
             }
         },
         filters: {

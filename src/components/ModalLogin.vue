@@ -3,12 +3,13 @@
              <div class="back" @click="onClickOutside">
                 <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
                     <div class="sm-form">
+                        <h5><img src="../assets/img/logo_portal_postal.png" class="img-responsive"/></h5>
                         <h5>Login</h5>
                         <div class="form-group col-md-6">
                             <input type="number" v-model="agencia" size="3" placeholder="agência" class="form-control form-control-sm" maxlength="3" />
                         </div>
                         <div class="form-group">
-                            <input type="email" v-model="email" placeholder="e-mail ou login" class="form-control form-control-sm" />
+                            <input type="email" v-model="email" placeholder="usuário" class="form-control form-control-sm" />
                         </div>
 
                         <div class="form-group">
@@ -20,7 +21,7 @@
                         <div class="forgot-password">
                             <a href="#" class="forgot-password mt-2 mb-4">Esqueceu a senha ?</a>
                         </div>
-                        <div class="social-icons">
+                      <!--  <div class="social-icons">
                             <ul>
                                 <li><a href="#"><i class="fa fa-google" style="color: #2e6da4"></i></a></li>
                                 <li><a href="#"><i class="fa fa-facebook" style="color: #2e6da4"></i></a></li>
@@ -28,7 +29,7 @@
                             </ul>
                         </div>
                         <strong>Response token:</strong>
-                        <pre>{{output}}</pre>
+                        <pre>{{output}}</pre> -->
                     </div>
             </div>
         </div>
@@ -68,9 +69,20 @@
                    console.log(JSON.stringify({ login: this.email, senha: this.senha}));
                    fetch("https://portalpostal.com.br/rest/cliente/usuario/login?idEmpresa=" +this.agencia, requestOptions)
                        .then(response => response.json())
-                       .then(data => {
-                           console.log(data)
-                           this.output = data.data.cliente_usuario.token
+                       .then(response => {
+                           console.log(response)
+                           let user = response.data.cliente_usuario;
+                           user.dataLoginInMillis = new Date().getTime();
+                           user.idEmpresa = this.agencia;
+                           const cliente = response.data.cliente;
+                           let temAcessoPesquisaPostagem = response.data.temAcessoPesquisaPostagem;
+                           // console.log('temAcessoPesquisaPostagem',temAcessoPesquisaPostagem);
+                           if (user && user.token) {
+                               // store user details and jwt token in local storage to keep user logged in between page refreshes
+                               localStorage.setItem('currentUser', JSON.stringify(user));
+                               localStorage.setItem('cliente', JSON.stringify(cliente));
+                               localStorage.setItem('temAcessoPesquisaPostagem', temAcessoPesquisaPostagem);
+                           }
                        })
                        .catch(function (error) {this.output = error })
                }

@@ -56,8 +56,10 @@
         />
         <div id="app">
             <router-view/>
-            <a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
         </div>
+        <Contato id="contato" class="pt-lg"></Contato>
+        <Footer></Footer>
+        <a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
 
     </div>
 </template>
@@ -67,10 +69,12 @@
     import i18n from '@/plugins/i18n';
     import CountryFlag from 'vue-country-flag';
     import VueScrollTo from 'vue-scrollto'
+    import Contato from "@/components/Contato";
 
     export default {
         name: 'App',
         components: {
+            Contato,
             Canvas,
             CountryFlag
         },

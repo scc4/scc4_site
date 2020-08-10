@@ -48,20 +48,22 @@
                     <div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="0.4s">
                         <form action="contact.php" method="post">
                             <div class="col-md-6 col-sm-6">
-                                <input type="text" class="form-control" placeholder="{{$t('seunome')}}" required>
+                                <input type="text" class="form-control" :placeholder="$t('seunome')" required>
                             </div>
 
                             <div class="col-md-6 col-sm-6">
-                                <input type="email" class="form-control" placeholder="{{$t('seuemail')}}" required>
+                                <input type="email" class="form-control" :placeholder="$t('seuemail')" required>
                             </div>
 
-                            <div class="offset-md-12  col-sm-12">
-                                <input type="tel" class="form-control" placeholder="{{$t('seutelefone')}}" required>
-                                <textarea class="form-control" placeholder="{{$t('suamensagem')}}" rows="6" required></textarea>
+                            <div class="col-md-6 col-sm-12">
+                                <input type="tel" class="form-control" :placeholder="$t('seutelefone')" required>
+                               </div>
+                            <div class="col-md-12 col-sm-12">
+                                <textarea class="form-control" :placeholder="$t('suamensagem')" rows="6" required></textarea>
                             </div>
 
                             <div class="col-md-4 col-sm-6">
-                                <input type="submit" class="form-control" value="{{$t('enviar')}}">
+                                <input type="submit" class="form-control" :value="$t('enviar')">
                             </div>
                         </form>
                     </div>
@@ -73,8 +75,7 @@
 
 <script>
     export default {
-        name: "Contato",
-        components: {}
+        name: "Contato"
     }
 </script>
 
