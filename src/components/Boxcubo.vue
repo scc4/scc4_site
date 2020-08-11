@@ -5,9 +5,8 @@
                 <div class="row">
                     <div class="col-12 text-center">
                         <div class="section-title">
-                            <h2>Um conceito inovador</h2>
-                            <p>Podendo ser facilmente integrada a qualquer software, a BOXCUBO é a unica solução que
-                                pode ser adquirida sem nenhum investimento inicial.</p>
+                            <h2>{{$t('conceitobox')}}</h2>
+                            <p>{{$t('textbox')}}</p>
                         </div>
                     </div>
                 </div>
@@ -22,8 +21,8 @@
                             </div>
                         </div>
                         <div class="video-testimonial-content">
-                            <h4 class="mb10">REPENSE</h4>
-                            <p>Como você pesa e mede suas caixas?</p>
+                            <h4 class="mb10">{{$t('video1T')}}</h4>
+                            <p>{{$t('video1Tx')}}</p>
                         </div>
                     </div>
 
@@ -36,8 +35,8 @@
                             </div>
                         </div>
                         <div class="video-testimonial-content">
-                            <h4 class="mb10">REDUZA</h4>
-                            <p>Menos tempo e recursos no porcesso de medição</p>
+                            <h4 class="mb10">{{$t('video2T')}}</h4>
+                            <p>{{$t('video2Tx')}}</p>
                         </div>
                     </div>
 
@@ -52,8 +51,8 @@
                             </div>
                         </div>
                         <div class="video-testimonial-content">
-                            <h4 class="mb10">REVISE</h4>
-                            <p>Veja a imagem seus objetos através da nossa interface gráfica ou na web</p>
+                            <h4 class="mb10">{{$t('video3T')}}</h4>
+                            <p>{{$t('video3Tx')}}</p>
                         </div>
                     </div>
                 </div>
@@ -75,14 +74,14 @@
                     <div class="fadeInUp col-md-6" data-wow-delay="0.4s">
                         <div>
                                 <span class="big-text">
-                                            + de 1.500.000
+                                            +  1.500.000
                                         </span>
-                            <p>Objetos medidos/mês</p>
+                            <p>{{$t('objetosbox')}}</p>
                         </div>
                     </div>
                     <div class="fadeInUp col-md-6" data-wow-delay="0.4s">
-                        <span class="big-text">+ de 180 </span>
-                        <p>Clientes</p>
+                        <span class="big-text">+ 180 </span>
+                        <p>{{$t('clients')}}</p>
                     </div>
                 </div>
             </div>
@@ -139,7 +138,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        border: 0px;
+        border: 0;
     }
 
     .mb10 {

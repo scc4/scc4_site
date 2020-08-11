@@ -32,15 +32,15 @@
                     <div class="fadeInUp col-md-6" data-wow-delay="0.4s">
                         <div>
                                 <span class="big-text">
-                                    3.800.000
+                                  + 3.800.000
                                 </span>
-                            <p>Objetos processados/mês</p>
+                            <p>{{$t('objetos')}}</p>
 
                         </div>
                     </div>
                     <div class="fadeInUp col-md-6" data-wow-delay="0.4s">
-                        <span class="big-text">+ de 17.000 </span>
-                        <p>Empresas atendidas</p>
+                        <span class="big-text">+ 17.000 </span>
+                        <p>{{$t('empresas')}}</p>
                     </div>
                 </div>
             </div>

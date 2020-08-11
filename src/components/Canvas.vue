@@ -14,7 +14,7 @@
                 <button v-if="login == 2" class="btn btn-boxcubo"
                         @click.stop="showModal"
                 >
-                    login Área do cliente
+                    {{$t('loginbtnbox')}}
                 </button>
             </div>
         </div>
@@ -174,11 +174,6 @@
     }
     .row {
         margin-right: 0;
-    }
-
-    .container {
-        width: 100%;
-        color: white;
     }
 
 

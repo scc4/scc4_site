@@ -86,18 +86,33 @@ const messages = {
                 heading: 'Seu cliente atualizado'
             },
             {
-                texto: 'Nosso sistema registra uma foto de todas as suas encomendas no momento da pesagem. Confira o tamanho e peso de todas as suas caixas. ',
+                texto: 'Nosso sistema registra uma foto de todas as suas encomendas no momento da pesagem. Tenha acesso ao tamanho e peso de todas as suas caixas. ',
                 heading: 'Imagem da sua caixa'
             },
             {
-                texto: 'Integre seu ERP, loja virtual ou marketplace com o Portal Postal. Muito mais agilidade e organização na geração e conferencia de etiquetas.  ',
+                texto: 'Integre seu ERP, loja virtual ou marketplace com o Portal Postal. Muito mais rápido e organizado.  ',
                 heading: 'Totalmente integrado'
             },
             {
                 texto: 'Procure por nossos Apps na Google Play ou na Apple Store e tenha controle total de seus envios diretamente do seu telefone. ',
                 heading: 'Apps Android e IOS'
             }
-        ]
+        ],
+        objetos: 'Objetos processados/mês',
+        empresas: 'Empresas atendidas',
+        conceitobox: 'Um conceito inovador',
+        textbox: 'Podendo ser facilmente integrada a qualquer software, a BOXCUBO é a unica solução que' +
+            ' pode ser adquirida sem nenhum investimento inicial. ',
+        objetosbox: 'Objetos medidos/mês',
+        clients: 'Clientes',
+        video1T: 'REPENSE',
+        video1Tx: 'A maneira como pesa e mede suas caixas ',
+        video2T: 'REDUZA',
+        video2Tx: 'Tempo e recursos no porcesso de medição. ',
+        video3T: 'REVISE',
+        video3Tx: 'Seus objetos através de imagem. ',
+        forgotpass: 'Esqueceu a senha?',
+        loginbtnbox: 'login área do cliente'
 
     },
 
@@ -175,22 +190,38 @@ const messages = {
 
         featuresportal:[
             {
-                texto: 'Automatic sending of all tracking updates for your order. ',
+                texto: 'Automatic email all tracking updates for your order. Coming soon, also by Whatsapp ',
                 heading: 'Update your client'
             },
             {
-                texto: 'Nosso sistema registra uma foto de todas as suas encomendas no momento da pesagem. Confira o tamanho e peso de todas as suas caixas. ',
-                heading: 'Imagem da sua caixa'
+                texto: 'Our system records a photo of all your orders at the time of weighing. Get access to the size and weight of all your boxes. ',
+                heading: 'Picture of your box'
             },
             {
-                texto: 'Integre seu ERP, loja virtual ou marketplace com o Portal Postal. Muito mais agilidade e organização na geração e conferencia de etiquetas.  ',
-                heading: 'Totalmente integrado'
+                texto: 'Integrate your ERP, online store or marketplace with the Postal Portal. Much faster and more organized. ',
+                heading: 'Fully integrated'
             },
             {
-                texto: 'Procure por nossos Apps na Google Play ou na Apple Store e tenha controle total de seus envios diretamente do seu telefone. ',
-                heading: 'Apps Android e IOS'
+                texto: 'Search for our Apps on Google Play and Apple Store and get full control of your shipments directly from your phone.',
+                heading: 'Android and IOS apps'
             }
-        ]
+        ],
+        objetos: 'Sent objects/month',
+        empresas: 'Companies using',
+        conceitobox: 'A new concept',
+        textbox: 'Being able to be easily integrated into any software, ' +
+            'BOXCUBO is the only solution that can be purchased without any initial investment. ',
+       objetosbox: 'Measured packages/month',
+        clients: 'Clients',
+        video1T: 'RETHINK',
+        video1Tx: 'The way you weigh and measure your boxes. ',
+        video2T: 'REDUCE',
+        video2Tx: 'Time and resources in the measurement process. ',
+        video3T: 'CHECK',
+        video3Tx: 'Your objects through image.',
+        forgotpass: 'Forgot your password?',
+        loginbtnbox: 'login client area',
+
 
     }
 };

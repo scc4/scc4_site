@@ -16,10 +16,10 @@
                             <passwordToglge v-model="senha" ></passwordToglge>
                             <!-- <input type="password" placeholder="senha" class="form-control form-control-sm" /> -->
                         </div>
-                        <button type="button" class="btn btn-primary btn-sm" @click="loginPortal()">Entrar</button>
+                        <button type="button" class="btn btn-primary btn-sm" @click="loginPortal()">Login</button>
 
                         <div class="forgot-password">
-                            <a href="#" class="forgot-password mt-2 mb-4">Esqueceu a senha ?</a>
+                            <a href="#" class="forgot-password mt-2 mb-4">{{$t('forgotpass')}}</a>
                         </div>
                       <!--  <div class="social-icons">
                             <ul>
@@ -193,7 +193,6 @@
         -webkit-transition: all 0.2s ease-in;
         -moz-transition: all 0.2s ease-in;
         -o-transition: all 0.2s ease-in;
-        -ms-transition: all 0.2s ease-in;
         transition: all 0.2s ease-in;
     }
 

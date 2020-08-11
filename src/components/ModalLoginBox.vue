@@ -3,22 +3,22 @@
         <div class="back" @click="onClickOutside">
             <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription" >
                 <div class="sm-form">
-
+                    <h5><img src="../assets/img/logo_boxcubo.png" class="img-responsive"/></h5>
                     <h5>Login</h5>
                     <div class="form-group">
                         <input type="email" v-model="email" placeholder="e-mail" class="form-control form-control-sm" />
                     </div>        <div class="form-group">
                     <input type="email" v-model="cnpj" placeholder="cnpj" class="form-control form-control-sm" />
                 </div>
-                    <button type="button" class="btn btn-danger btn-sm" @click="loginBoxCubo()">Entrar</button>
+                    <button type="button" class="btn btn-danger btn-sm" @click="loginBoxCubo()">Login</button>
 
-                    <div class="social-icons">
+                   <!-- <div class="social-icons">
                         <ul>
                             <li><a href="#"><i class="fa fa-google" ></i></a></li>
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter" ></i></a></li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
            </div>
         </div>
@@ -33,9 +33,8 @@
         },
         data(){
             return{
-                agencia: '',
                 email: '',
-                senha:'',
+                cnpj:'',
                 output: ''
             }
         },
@@ -49,12 +48,11 @@
        },
        loginBoxCubo(){
            const requestOptions = {
-               method: "GET",
+               method: "POST",
                headers: { "Content-Type": "application/x-www-form-urlencoded" }
            };
-           fetch("http://www.portalpostal.com.br/ServLoginBox?idEmpresa=" +this.email + this.cnpj, requestOptions)
+           fetch("http://www.portalpostal.com.br/ServLoginBox?email=" +this.email +'&cnpj='+ this.cnpj, requestOptions)
                .then(response => console.log(response))
-
                .catch(function (error) {this.output = error })
        }
     }
@@ -78,14 +76,15 @@
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%);
-        max-width: 300px;
-        height: 400px;
+        max-width: 400px;
+        height: 800px;
         background: transparent;
         overflow-x: auto;
         display: flex;
         flex-direction: column;
         z-index: 1200;
         margin-top: 100px;
+        padding: 50px;
     }
 
     .btn{
@@ -93,7 +92,7 @@
     }
 
     .col-md-6 {
-        padding-left: 0px !important;
+        padding-left: 0 !important;
     }
 
 
@@ -109,9 +108,7 @@
         border: solid 1px #999999;
     }
 
-    .forgot-password {
-        float: right;
-    }
+
     .forgot-password a {
         text-align: left;
         font-size: 10px;
@@ -162,7 +159,6 @@
         -webkit-transition: all 0.2s ease-in;
         -moz-transition: all 0.2s ease-in;
         -o-transition: all 0.2s ease-in;
-        -ms-transition: all 0.2s ease-in;
         transition: all 0.2s ease-in;
     }
 
